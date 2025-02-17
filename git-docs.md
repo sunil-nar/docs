@@ -1,8 +1,11 @@
 - [Add an existing project to GitHub from command line](#addexistingproject)
+- [Clone a remote git repository on your local machine](#cloneremoterepository)
+- [Git commands](#gitcommands)
 
-#### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
 
-{{% panel %}}
+
+### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
+<div style="border: 1px solid lightgray; padding: 10px; border-radius: 5px;">
 https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 
 Create a new repository on GitHub   
@@ -22,12 +25,12 @@ git@github.com:test-user/test_project.git
 
 verify new remote url
 git remote -v
+</div>
 
-{{% /panel %}}
 
-##### Clone a remote git repository on your local machine
+### Clone a remote git repository on your local machine: <a name="cloneremoterepository"></a>
 
-{{% panel %}}
+
 git clone <remote_repo>
 
         git clone -b <branch> <remote_repo>
@@ -39,11 +42,11 @@ Example
 
 https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
-{{% /panel %}}
 
-##### Git commands
 
-{{% panel %}}
+### Git commands: <a name="cloneremoterepository"></a>
+
+
 
 ###### pull from remote branch (master)  to local (origin)
 
@@ -215,13 +218,13 @@ file is not removed from the working dir. The file will then be shown as untrack
 
 
 
-{{% /panel %}}
+
 
 [Revert a Git Merge]: https://mijingo.com/blog/reverting-a-git-merge
 
 ##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a>
 
-{{% panel %}}
+
 
     Push your static website to a git repository
 
@@ -233,4 +236,4 @@ file is not removed from the working dir. The file will then be shown as untrack
 
     Enter the URL link in a browser to launch your static website.
 
-{{% /panel %}}
+
