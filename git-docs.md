@@ -1,11 +1,10 @@
 - [Add an existing project to GitHub from command line](#addexistingproject)
 - [Clone a remote git repository on your local machine](#cloneremoterepository)
-- [Git commands](#gitcommands)
+- [Git commands](#gitcommandsheading)
 
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
-<div style="border: 1px solid; padding: 10px; border-radius: 5px;">
 https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 
 Create a new repository on GitHub   
@@ -25,7 +24,6 @@ git@github.com:test-user/test_project.git
 
 verify new remote url
 git remote -v
-</div>
 
 
 ### Clone a remote git repository on your local machine: <a name="cloneremoterepository"></a>
@@ -44,7 +42,7 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 
 
-### Git commands: <a name="cloneremoterepository"></a>
+### Git commands: <a name="gitcommandsheading"></a>
 
 
 
