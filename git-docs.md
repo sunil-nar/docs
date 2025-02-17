@@ -1,6 +1,6 @@
 - [Add an existing project to GitHub from command line](#addexistingproject)
 
-## Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
+#### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
 
 {{% panel %}}
 https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
