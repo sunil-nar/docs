@@ -44,7 +44,7 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 ### Git commands: <a name="gitcommandsheading"></a>
 
-###### pull from remote branch (master)  to local (origin): <a name="pull-from-main-to-local"></a>
+###### pull from remote branch (master)  to local (origin): <a name="#pull-from-main-to-local"></a>
 
 	git pull origin master
 
