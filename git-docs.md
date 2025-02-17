@@ -1,7 +1,14 @@
-- [Add an existing project to GitHub from command line](#addexistingproject)
-- [Clone a remote git repository on your local machine](#cloneremoterepository)
+- [Add an existing project to GitHub from command line](#add-existing-project)
+- [Clone a remote git repository on your local machine](#clone-remote-repository)
 - [Git commands](#gitcommandsheading)
     - [pull from remote branch (main)  to local (origin)](#pull-from-main-to-local)
+    - [pull from remote branch (test-branch)  to local (origin)](#pull-from-remote-branch)
+    - [create new branch](#create new branch)
+    - [switch to another branch](#switch-to-another-branch)
+    - [push a new local branch to remote git repository](#push-new-local-branch)
+    - [pull from remote branch (test-branch) to local (origin)](#pull-from-remote-branch)
+    - [push from local branch (origin) to remote branch (test-branch)](#push-from-local-branch)
+    - [merge local branch with main](#merge-local-branch-with-main)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -44,13 +51,13 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 ### Git commands: <a name="gitcommandsheading"></a>
 
-###### pull from remote branch (master)  to local (origin): <a name="pull-from-main-to-local"></a>
+###### pull from remote branch (main)  to local (origin): <a name="pull-from-main-to-local"></a>
 
 	git pull origin master
 
-###### push from local branch (origin) to remote branch (master)
+###### push from local branch (origin) to remote branch (main)
 
-	git push origin master
+	git push origin main
 
 ###### create new branch
 
@@ -72,10 +79,10 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 	git push origin test-branch
 
-###### merge local branch with master:
+###### merge local branch with main:
 
-	git checkout master
-	git pull origin master
+	git checkout main
+	git pull origin main
 	git merge test-branch
 
 ###### rename local branch
@@ -105,7 +112,7 @@ If you want to create a new branch branch2 from existing branch branch1
 
 ###### merge two local branches
 https://stackoverflow.com/questions/25053697/git-merge-two-local-branches/25053738
-If you have branch Master, branch1 and branch2. To merge branch2 into branch1
+If you have branch main, branch1 and branch2. To merge branch2 into branch1
 
     git checkout branch1
     git merge branch2
@@ -198,14 +205,14 @@ file is not removed from the working dir. The file will then be shown as untrack
     git rev-parse <branch>
     
     example: 
-        git rev-parse master
+        git rev-parse main
         17f2303133734f4b9a9aacfe52209e04ec11aff4
 
 ###### Revert a git merge <a href="https://mijingo.com/blog/reverting-a-git-merge" target="_blank">(link)</a>
 
     Example: 
     1. find hash of the branch you want to revert 
-        git rev-parse master
+        git rev-parse main
         17f2303133734f4b9a9aacfe52209e04ec11aff4
     
     2. Use the hash to revert a merge
@@ -226,7 +233,7 @@ file is not removed from the working dir. The file will then be shown as untrack
 
     Go to the settings page of your repository and scroll to the bottom where it says Danger Zone. Change the visibility to public. 
 
-    Scroll down to the GitHub Pages section and chose the source branch. (example - master). Select folder root and click "Save" button.
+    Scroll down to the GitHub Pages section and chose the source branch. (example - main). Select folder root and click "Save" button.
 
     A message with a url where your site is published at will appear under the GitHub Pages section of the settings page.
 
