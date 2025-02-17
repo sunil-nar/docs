@@ -1,7 +1,7 @@
 - [Add an existing project to GitHub from command line](#addexistingproject)
 - [Clone a remote git repository on your local machine](#cloneremoterepository)
 - [Git commands](#gitcommandsheading)
-    - [pull from remote branch (main)  to local (origin)](pull-from-main-to-local)
+    - [pull from remote branch (main)  to local (origin)](#pull-from-main-to-local)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -44,7 +44,7 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 ### Git commands: <a name="gitcommandsheading"></a>
 
-###### pull from remote branch (master)  to local (origin): <a name="#pull-from-main-to-local"></a>
+###### pull from remote branch (master)  to local (origin): <a name="pull-from-main-to-local"></a>
 
 	git pull origin master
 
