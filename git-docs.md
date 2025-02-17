@@ -5,7 +5,7 @@
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
-<div style="border: 1px solid lightgray; padding: 10px; border-radius: 5px;">
+<div style="border: 1px solid; padding: 10px; border-radius: 5px;">
 https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 
 Create a new repository on GitHub   
