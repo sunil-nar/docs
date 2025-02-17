@@ -3,7 +3,7 @@
 - [Git commands](#gitcommandsheading)
     - [pull from remote branch (main)  to local (origin)](#pull-from-main-to-local)
     - [pull from remote branch (test-branch)  to local (origin)](#pull-from-remote-branch)
-    - [create new branch](#create new branch)
+    - [create new branch](#create-new-branch)
     - [switch to another branch](#switch-to-another-branch)
     - [push a new local branch to remote git repository](#push-new-local-branch)
     - [pull from remote branch (test-branch) to local (origin)](#pull-from-remote-branch)
