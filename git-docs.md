@@ -19,6 +19,17 @@
     - [remove all local untracked files](#removeall-local-untracked-files)
     - [unstage a staged file](#unstage-staged-file)
     - [revert uncommited changes](#revert-un-commited-changes)
+    - [undo file delete](#undo-file-del)
+    - [Delete local branch](#del-loc-branch)
+    - [Delete remote branch](#del-rem-branch)
+    - [Show history of changes on a file](#show-file-change-history)
+    - [Change commit message](#change-commit-msg)
+    - [See the remote repository your project is pointing to](#show-remote-repository)
+    - [Stage a file for removal](#stage-file-for-removal)
+    - [Remove all version tracking from a projects directory](#remove-all-version-tracking-info)
+    - [Find hash of branch](#find-hash-branch)
+    - [Revert a git merge](#revert-git-merge)
+    - [Deploy static website](#deploy-static-website)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -169,35 +180,35 @@ Revert uncommitted changes only to particular file or directory:
 
     git checkout [some_dir|file.txt]
 
-###### undo file delete: <a name="placeholder"></a>
+###### undo file delete: <a name="undo-file-del"></a>
 
     git checkout HEAD <filename>
 
 Restoring file delete: https://www.git-tower.com/learn/git/faq/restoring-deleted-files/
 
-###### Delete local branch: <a name="placeholder"></a>
+###### Delete local branch: <a name="del-loc-branch"></a>
 The local branch should not be current while deleting it. Switch to some other branch before deleting it.
 
 	git branch -d <branch_name>
 
-###### Delete remote branch: <a name="placeholder"></a>
+###### Delete remote branch: <a name="del-rem-branch"></a>
 
 	git push origin --delete <branch_name>
 
-###### Show history of changes on a file: <a name="placeholder"></a>
+###### Show history of changes on a file: <a name="show-file-change-history"></a>
 
 	git annotate <file-name>
 
-###### Change commit message (when commit has not been pushed online): <a name="placeholder"></a>
+###### Change commit message (when commit has not been pushed online): <a name="change-commmit-msg"></a>
 
 	git commit --amend
 press Enter. In the vi editor edit the commit message and save
 
-###### See the remote repository your project is pointing to: <a name="placeholder"></a>
+###### See the remote repository your project is pointing to: <a name="show-remote-repository"></a>
 
  	git remote -v
 
-###### Stage a file for removal: <a name="placeholder"></a>
+###### Stage a file for removal: <a name="stage-file-for-removal"></a>
 file is not removed from the working dir. The file will then be shown as untracked.
 
     untrack all files
@@ -206,11 +217,11 @@ file is not removed from the working dir. The file will then be shown as untrack
  	untrack specific file
  	    git rm --cached foo.txt
 
-###### Remove all version tracking from a projrcts directory: <a name="placeholder"></a>
+###### Remove all version tracking from a projects directory: <a name="remove-all-version-tracking-info"></a>
 
     rm -rf .git
 
-###### Find hash of branch: <a name="placeholder"></a>
+###### Find hash of branch: <a name="find-hash-branch"></a>
 
     git rev-parse <branch>
     
@@ -218,7 +229,7 @@ file is not removed from the working dir. The file will then be shown as untrack
         git rev-parse main
         17f2303133734f4b9a9aacfe52209e04ec11aff4
 
-###### Revert a git merge <a href="https://mijingo.com/blog/reverting-a-git-merge" target="_blank">(link)</a>
+###### Revert a git merge <a href="https://mijingo.com/blog/reverting-a-git-merge" target="_blank">(link)</a><a name="revert-git-merge"></a>
 
     Example: 
     1. find hash of the branch you want to revert 
@@ -228,16 +239,7 @@ file is not removed from the working dir. The file will then be shown as untrack
     2. Use the hash to revert a merge
         git revert -m 1 17f2303133734f4b9a9aacfe52209e04ec11aff4
 
-
-
-
-
-
-[Revert a Git Merge]: https://mijingo.com/blog/reverting-a-git-merge
-
-##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a>
-
-
+##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-website"></a>
 
     Push your static website to a git repository
 
