@@ -16,6 +16,9 @@
     - [git add all](#gitadd-all)
     - [undo git add](#undo-gitadd)
     - [undo all files that were added](#undo-all-added-files)
+    - [remove all local untracked files](#remove-all-local-untracked-files)
+    - [unstage a staged file](#unstage-staged-file)
+    - [revert uncommited changes](#revert-uncommited-changes)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -145,7 +148,7 @@ Add all files under folder vendor
 
 	git reset	
 
-###### remove all local untracked files: <a name="placeholder"></a>
+###### remove all local untracked files:
 remove all local untracked files (local changes that have not yet been commited) from a dir, so only git tracked files remain
 
     git clean -fd <some-dir>
@@ -156,7 +159,7 @@ remove all local untracked files (local changes that have not yet been commited)
     -i  --interactive Show what would be done and clean files interactively
     -n  --dry-run show what would be done. Don't actually remove anything
 
-###### unstage a staged file: <a name="placeholder"></a>
+###### unstage a staged file: <a name="unstage-staged-file"></a>
 (staged file is a file that has been added but not commited)
 
     git restore --staged <file_name> 
