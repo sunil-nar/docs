@@ -341,7 +341,7 @@ Resolve any conflicts (if prompted) and continue
 
     git cherry-pick --continue
 
-##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-site"></a>
+### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-site"></a>
 
     Push your static website to a git repository
 
