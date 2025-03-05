@@ -29,11 +29,11 @@
     - [Remove all version tracking from a projects directory](#remove-all-version-tracking-info)
     - [Find hash of branch](#find-hash-branch)
     - [Revert a git merge](#revert-git-merge)
-    - [Deploy static website](#deploy-static-website)
     - [Stash changes](#stash-the-changes)
     - [Fetch command](#fetch)
     - [Rebase command](#rebase)
     - [Cherry pick commits](#cherrypick)
+    - [Deploy static website](#deploy-static-site)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -243,7 +243,7 @@ file is not removed from the working dir. The file will then be shown as untrack
     2. Use the hash to revert a merge
         git revert -m 1 17f2303133734f4b9a9aacfe52209e04ec11aff4
 
-##### Stash changes:<a name="stash-the-changes"></a>
+#### Stash changes:<a name="stash-the-changes"></a>
 
 If you want to temporarily remove the changes from your working directory and apply them later, you can stash them:
 
@@ -261,7 +261,7 @@ List what is in stash
 	git stash list
 
 
-##### Fetch command:<a name="fetch"></a>
+#### Fetch command:<a name="fetch"></a>
 Fetch a single branch
 
 	git fetch origin test-branch
@@ -293,7 +293,7 @@ Verify the branch
 	git branch -vv
 
 
-#### Rebase:<a name="rebase"></a>
+### Rebase:<a name="rebase"></a>
 
 Rebase local branch on to main
 
@@ -317,7 +317,7 @@ To set rebase globally
 	git config --global pull.rebase true
 
 
-#### Cherry pick:<a name="cherrypick"></a>
+### Cherry pick:<a name="cherrypick"></a>
 
 Example workflow for git cherry-pick
 
@@ -341,7 +341,7 @@ Resolve any conflicts (if prompted) and continue
 
     git cherry-pick --continue
 
-##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-website"></a>
+##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-site"></a>
 
     Push your static website to a git repository
 
