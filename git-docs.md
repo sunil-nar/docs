@@ -260,7 +260,6 @@ List what is in stash
 
 	git stash list
 
-
 #### Fetch command:<a name="fetch"></a>
 Fetch a single branch
 
@@ -292,8 +291,7 @@ Verify the branch
 
 	git branch -vv
 
-
-### Rebase:<a name="rebase"></a>
+#### Rebase:<a name="rebase"></a>
 
 Rebase local branch on to main
 
@@ -317,7 +315,7 @@ To set rebase globally
 	git config --global pull.rebase true
 
 
-### Cherry pick:<a name="cherrypick"></a>
+#### Cherry pick:<a name="cherrypick"></a>
 
 Example workflow for git cherry-pick
 
@@ -341,7 +339,7 @@ Resolve any conflicts (if prompted) and continue
 
     git cherry-pick --continue
 
-### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-site"></a>
+#### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-site"></a>
 
     Push your static website to a git repository
 
