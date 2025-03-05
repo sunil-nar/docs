@@ -30,6 +30,10 @@
     - [Find hash of branch](#find-hash-branch)
     - [Revert a git merge](#revert-git-merge)
     - [Deploy static website](#deploy-static-website)
+    - [Stash changes](#stash-the-changes)
+    - [Fetch command](#fetch)
+    - [Rebase command](#rebase)
+    - [Cherry pick commits](#cherrypick)
 
 
 ### Add an existing project to GitHub from command line: <a name="addexistingproject"></a>
@@ -239,6 +243,104 @@ file is not removed from the working dir. The file will then be shown as untrack
     2. Use the hash to revert a merge
         git revert -m 1 17f2303133734f4b9a9aacfe52209e04ec11aff4
 
+##### Stash changes:<a name="stash-the-changes"></a>
+
+If you want to temporarily remove the changes from your working directory and apply them later, you can stash them:
+
+Do this in current_branch
+
+    git stash
+    git checkout <other_branch>
+
+Return back to current_branch
+
+    git stash apply
+
+List what is in stash
+
+	git stash list
+
+
+##### Fetch command:<a name="fetch"></a>
+Fetch a single branch
+
+	git fetch origin test-branch
+
+
+Create a new local branch test-branch to track the remote branch origin/test-branch and switch to the newly created local branch test-branch
+
+If you were in main when you ran this command, the content of test-branch will match the content of origin/test-branch. It does not bring any changes from the main branch.
+
+	git checkout -b test-branch origin/test-branch
+
+
+list local and remote branches
+
+	git branch -vv
+
+Fetch all remote branches:
+
+	git fetch origin
+
+This ensures that your local Git repository is aware of all branches on the remote repository
+
+Create and switch to the new local branch: You can create a new branch locally and set it to track the remote test-branch by using git checkout -b
+
+	git checkout -b test-branch origin/test-branch
+
+Verify the branch
+
+	git branch -vv
+
+
+#### Rebase:<a name="rebase"></a>
+
+Rebase local branch on to main
+
+    git checkout main
+    git pull origin main
+    git rebase test-branch
+
+Set git to use rebase by default for current directory:
+
+	git config pull.rebase true
+
+You can verify wether the default is set to merge or rebase in your git directory:
+
+	git config --get pull.rebase
+
+If it returns true, rebase is enabled; if false, merge is used.
+
+
+To set rebase globally
+
+	git config --global pull.rebase true
+
+
+#### Cherry pick:<a name="cherrypick"></a>
+
+Example workflow for git cherry-pick
+
+Switch to the target branch
+  
+    git checkout test-branch
+
+List commits on the main branch to find the ones you want
+
+    git log main
+
+Cherry-pick a specific commit
+
+    git cherry-pick abc1234
+
+Cherry-pick multiple commits
+
+    git cherry-pick def5678 ghi9012
+
+Resolve any conflicts (if prompted) and continue
+
+    git cherry-pick --continue
+
 ##### Deploy your static website with <a href="https://pages.github.com/" target="_blank">Github Pages</a><a name="deploy-static-website"></a>
 
     Push your static website to a git repository
@@ -250,5 +352,3 @@ file is not removed from the working dir. The file will then be shown as untrack
     A message with a url where your site is published at will appear under the GitHub Pages section of the settings page.
 
     Enter the URL link in a browser to launch your static website.
-
-
