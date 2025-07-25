@@ -314,6 +314,11 @@ To set rebase globally
 
 	git config --global pull.rebase true
 
+On pull if you want to merge instead of rebase.
+(Useful if you are getting conflicts with rebase)
+
+	git pull --no-rebase origin master
+
 
 #### Cherry pick:<a name="cherrypick"></a>
 
