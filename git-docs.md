@@ -23,7 +23,7 @@
     - [Delete local branch](#del-loc-branch)
     - [Delete remote branch](#del-rem-branch)
     - [Show history of changes on a file](#show-file-change-history)
-    - [Change commit message](#change-commit-msg)
+    - [Change commit message](#changecommitmsg)
     - [See the remote repository your project is pointing to](#show-remote-repository)
     - [Stage a file for removal](#stage-file-for-removal)
     - [Remove all version tracking from a projects directory](#remove-all-version-tracking-info)
@@ -203,7 +203,7 @@ The local branch should not be current while deleting it. Switch to some other b
 
 	git annotate <file-name>
 
-###### Change commit message (when commit has not been pushed online): <a name="change-commmit-msg"></a>
+###### Change commit message (when commit has not been pushed online): <a name="changecommmitmsg"></a>
 
 	git commit --amend
 press Enter. In the vi editor edit the commit message and save
@@ -319,6 +319,25 @@ On pull if you want to merge instead of rebase.
 
 	git pull --no-rebase origin master
 
+To unset rebase globally and revert to merge (default is merge)
+
+    git config --global pull.rebase false
+    
+    This command should returns false. If it returns true, it means a more specific config is overriding the global one.
+        git config --get pull.rebase
+    
+    Check all configs that define pull.rebase 
+        git config --show-origin --get-all pull.rebase
+    
+    The above command will show you where the true value is coming from — for example:
+        file:/Users/you/.gitconfig   false
+        file:.git/config        true
+
+    Turn off rebase for the current repository
+        git config pull.rebase false
+    
+    Then check again:
+        git config --get pull.rebase
 
 #### Cherry pick:<a name="cherrypick"></a>
 
