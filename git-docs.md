@@ -77,41 +77,41 @@ https://coderwall.com/p/y7hf6w/how-to-clone-a-specific-branch-in-git
 
 ### Git commands: <a name="gitcommandsheading"></a>
 
-###### pull from remote branch (main)  to local (origin): <a name="pull-from-main-to-local"></a>
+##### pull from remote branch (main)  to local (origin): <a name="pull-from-main-to-local"></a>
 
 	git pull origin master
 
-###### push from local branch (origin) to remote branch (main)
+##### push from local branch (origin) to remote branch (main)
 
 	git push origin main
 
-###### create new branch: <a name="create-new-branch"></a>
+##### create new branch: <a name="create-new-branch"></a>
 
 	git checkout -b test-branch-1
 
-###### switch to another branch: <a name="switch-to-another-branch"></a>
+##### switch to another branch: <a name="switch-to-another-branch"></a>
 
 	git checkout test-branch-2
 
-###### push a new local branch to remote git repository: <a name="push-new-local-branch"></a>
+##### push a new local branch to remote git repository: <a name="push-new-local-branch"></a>
 
 	git push -u origin test-branch-2
 
-###### pull from remote branch (test-branch)  to local (origin): <a name="pull-from-remote-branch"></a>
+##### pull from remote branch (test-branch)  to local (origin): <a name="pull-from-remote-branch"></a>
 
 	git pull origin test-branch
 
-###### push from local branch (origin) to remote branch (test-branch): <a name="push-from-local-branch"></a>
+##### push from local branch (origin) to remote branch (test-branch): <a name="push-from-local-branch"></a>
 
 	git push origin test-branch
 
-###### merge local branch with main: <a name="merge-local-branch-with-main"></a>
+##### merge local branch with main: <a name="merge-local-branch-with-main"></a>
 
 	git checkout main
 	git pull origin main
 	git merge test-branch
 
-###### rename local branch: <a name="rename-local-branch"></a>
+##### rename local branch: <a name="rename-local-branch"></a>
 if you are on the branch you want to rename:
 
 		git branch -m new-name
@@ -120,30 +120,30 @@ if you are on a different branch
 
 		git branch -m old-name new-name
 
-###### delete file from git repository: <a name="delete-file-from-repository"></a>
+##### delete file from git repository: <a name="delete-file-from-repository"></a>
 
 	git rm file.txt
 
-###### delete directory from git repository: <a name="delete-directory-from-repository"></a>
+##### delete directory from git repository: <a name="delete-directory-from-repository"></a>
 
 	git rm -r folder-name
 
 
-###### create git branch from another branch: <a name="create-branch-from-another-branch"></a>
+##### create git branch from another branch: <a name="create-branch-from-another-branch"></a>
 
 If you want to create a new branch branch2 from existing branch branch1
 
 	git checkout branch1
 	git checkout -b branch2 branch1 
 
-###### merge two local branches: <a name="merge-local-branches"></a>
+##### merge two local branches: <a name="merge-local-branches"></a>
 https://stackoverflow.com/questions/25053697/git-merge-two-local-branches/25053738
 If you have branch main, branch1 and branch2. To merge branch2 into branch1
 
     git checkout branch1
     git merge branch2
 
-###### git add all: <a name="gitadd-all"></a>
+##### git add all: <a name="gitadd-all"></a>
 
 Stage all files in your repository, which includes all new, modified and deleted files.
 
@@ -156,15 +156,15 @@ Add all files under folder vendor
 
     git add -A vendor
 
-###### undo git add: <a name="undo-gitadd"></a>
+##### undo git add: <a name="undo-gitadd"></a>
 
 	git reset <file_name>
 
-###### undo all files that were added: <a name="undo-all-added-files"></a>
+##### undo all files that were added: <a name="undo-all-added-files"></a>
 
 	git reset	
 
-###### remove all local untracked files: <a name="removeall-local-untracked-files"></a>
+##### remove all local untracked files: <a name="removeall-local-untracked-files"></a>
 remove all local untracked files (local changes that have not yet been commited) from a dir, so only git tracked files remain
 
     git clean -fd <some-dir>
@@ -175,28 +175,28 @@ remove all local untracked files (local changes that have not yet been commited)
     -i  --interactive Show what would be done and clean files interactively
     -n  --dry-run show what would be done. Don't actually remove anything
 
-###### unstage a staged file: <a name="unstage-staged-file"></a>
+##### unstage a staged file: <a name="unstage-staged-file"></a>
 (staged file is a file that has been added but not commited)
 
     git restore --staged <file_name> 
 
-###### revert uncommited changes: <a name="revert-un-commited-changes"></a>
+##### revert uncommited changes: <a name="revert-un-commited-changes"></a>
 Revert uncommitted changes only to particular file or directory:
 
     git checkout [some_dir|file.txt]
 
-###### undo file delete: <a name="undo-file-del"></a>
+##### undo file delete: <a name="undo-file-del"></a>
 
     git checkout HEAD <filename>
 
 Restoring file delete: https://www.git-tower.com/learn/git/faq/restoring-deleted-files/
 
-###### Delete local branch: <a name="del-loc-branch"></a>
+##### Delete local branch: <a name="del-loc-branch"></a>
 The local branch should not be current while deleting it. Switch to some other branch before deleting it.
 
 	git branch -d <branch_name>
 
-###### Revert a commit: <a name="revert-commit"></a>
+##### Revert a commit: <a name="revert-commit"></a>
 Revert commits made to local branch(example: test-branch or main) 
 
 Undo last commit, keep changes staged.
@@ -214,24 +214,24 @@ Undo the commit and discard the changes
     git reset --hard HEAD~1
 
 
-###### Delete remote branch: <a name="del-rem-branch"></a>
+##### Delete remote branch: <a name="del-rem-branch"></a>
 
 	git push origin --delete <branch_name>
 
-###### Show history of changes on a file: <a name="show-file-change-history"></a>
+##### Show history of changes on a file: <a name="show-file-change-history"></a>
 
 	git annotate <file-name>
 
-###### Change commit message (when commit has not been pushed online): <a name="changecommmitmsg"></a>
+##### Change commit message (when commit has not been pushed online): <a name="changecommmitmsg"></a>
 
 	git commit --amend
 press Enter. In the vi editor edit the commit message and save
 
-###### See the remote repository your project is pointing to: <a name="show-remote-repository"></a>
+##### See the remote repository your project is pointing to: <a name="show-remote-repository"></a>
 
  	git remote -v
 
-###### Stage a file for removal: <a name="stage-file-for-removal"></a>
+##### Stage a file for removal: <a name="stage-file-for-removal"></a>
 file is not removed from the working dir. The file will then be shown as untracked.
 
     untrack all files
@@ -240,11 +240,11 @@ file is not removed from the working dir. The file will then be shown as untrack
  	untrack specific file
  	    git rm --cached foo.txt
 
-###### Remove all version tracking from a projects directory: <a name="remove-all-version-tracking-info"></a>
+##### Remove all version tracking from a projects directory: <a name="remove-all-version-tracking-info"></a>
 
     rm -rf .git
 
-###### Find hash of branch: <a name="find-hash-branch"></a>
+##### Find hash of branch: <a name="find-hash-branch"></a>
 
     git rev-parse <branch>
     
@@ -252,7 +252,7 @@ file is not removed from the working dir. The file will then be shown as untrack
         git rev-parse main
         17f2303133734f4b9a9aacfe52209e04ec11aff4
 
-###### Revert a git merge <a href="https://mijingo.com/blog/reverting-a-git-merge" target="_blank">(link)</a><a name="revert-git-merge"></a>
+##### Revert a git merge <a href="https://mijingo.com/blog/reverting-a-git-merge" target="_blank">(link)</a><a name="revert-git-merge"></a>
 
     Example: 
     1. find hash of the branch you want to revert 
