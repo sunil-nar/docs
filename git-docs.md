@@ -21,6 +21,7 @@
     - [revert uncommited changes](#revert-un-commited-changes)
     - [undo file delete](#undo-file-del)
     - [Delete local branch](#del-loc-branch)
+    - [Revert a commit](#revert-commit)
     - [Delete remote branch](#del-rem-branch)
     - [Show history of changes on a file](#show-file-change-history)
     - [Change commit message](#changecommitmsg)
@@ -194,6 +195,24 @@ Restoring file delete: https://www.git-tower.com/learn/git/faq/restoring-deleted
 The local branch should not be current while deleting it. Switch to some other branch before deleting it.
 
 	git branch -d <branch_name>
+
+###### Revert a commit: <a name="revert-commit"></a>
+Revert commits made to local branch(example: test-branch or main) 
+
+Undo last commit, keep changes staged.
+After running this command, git status will show files that were added and ready for commit(staged)
+
+    git reset --soft HEAD~1
+
+Undo last commit, keep commits unstaged.
+After running this command, git status will show files that were changed but not yet added
+
+    git reset HEAD~1
+
+Undo the commit and discard the changes
+
+    git reset --hard HEAD~1
+
 
 ###### Delete remote branch: <a name="del-rem-branch"></a>
 
